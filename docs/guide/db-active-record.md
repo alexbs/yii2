@@ -1052,6 +1052,19 @@ $customers = Customer::find()->joinWith([
 ])->with('country')
     ->all();
 ```
+on the official site the symbol "]" is missing!
+Plese look and compare at this line of the sample code on official site and this github file:
+
+$query->andWhere(['>', 'subtotal', 100);
+http://www.yiiframework.com/doc-2.0/guide-db-active-record.html
+
+and here:
+https://github.com/yiisoft/yii2/edit/master/docs/guide/db-active-record.md
+$query->andWhere(['>', 'subtotal', 100]);
+
+
+
+
 
 Sometimes when joining two tables, you may need to specify some extra conditions in the `ON` part of the JOIN query.
 This can be done by calling the [[yii\db\ActiveQuery::onCondition()]] method like the following:
